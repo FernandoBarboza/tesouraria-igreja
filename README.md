@@ -1,2 +1,3 @@
 # tesouraria-igreja
-Sistema de gestão da tesouraria de igreja.
+Autor: José Fernando Barboza
+Objetivo: Sistema de gestão da tesouraria de igreja.
