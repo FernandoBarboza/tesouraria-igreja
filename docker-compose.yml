@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db: # Nome do serviço dentro do Compose
+    image: postgres:16 # Imagem oficial do Postgres na versão exigida
+    container_name: tesouraria-db # Nome do container rodando
+    ports:
+      - "5432:5432" # Mapeia a porta local para a do container
+    environment:
+      POSTGRES_DB: tesouraria_db # Nome do banco a ser criado na inicialização
+      POSTGRES_USER: postgres # Usuário principal
+      POSTGRES_PASSWORD: postgres # Senha do usuário principal
+    volumes:
+      - pgdata:/var/lib/postgresql/data # Pasta onde os dados do banco ficam salvos no HD
+
+volumes:
+  pgdata: # Declara o volume nomeado para manter os dados salvos se o container baixar
